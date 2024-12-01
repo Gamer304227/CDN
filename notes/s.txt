@@ -1,0 +1,34 @@
+Q2. Prove by induction:
+1² + 2² + 3² + ... + n² = [n(n+1)(2n+1)] / 6
+
+Let Pn: 1² + 2² + 3² + ... + n² = [n(n+1)(2n+1)] / 6.
+
+Basics:
+n = 2
+LHS = 1² + 2² = 1 + 4 = 5
+RHS = [2(2+1)(2×2+1)] / 6
+     = [2(3)(5)] / 6
+     = 30 / 6 = 5
+LHS = RHS. Therefore, P2 is true.
+
+Hypothesis:
+Assume that Pk is true for n = k.
+i.e., 1² + 2² + ... + k² = [k(k+1)(2k+1)] / 6.
+
+Induction:
+We need to prove that Pk+1 is true, i.e.,
+1² + 2² + ... + k² + (k+1)² = [(k+1)((k+1)+1)(2(k+1)+1)] / 6.
+
+LHS:
+1² + 2² + ... + k² + (k+1)²
+= [k(k+1)(2k+1)] / 6 + (k+1)²   (using the inductive hypothesis)
+= [(k(k+1)(2k+1)) / 6] + (k+1)²
+= [(k(k+1)(2k+1)) + 6(k+1)²] / 6
+= [(k+1)(k(2k+1) + 6(k+1))] / 6
+= [(k+1)(2k² + k + 6k + 6)] / 6
+= [(k+1)(2k² + 7k + 6)] / 6
+= [(k+1)(k+2)(2k+1)] / 6   (factoring 2k² + 7k + 6 as (k+2)(2k+1)).
+= RHS
+=> P(k+1) is true
+
+∴ ∀n Pn is true.
